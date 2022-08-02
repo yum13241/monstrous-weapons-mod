@@ -1,0 +1,46 @@
+------CREDITS------
+
+
+This is where I credit work that I have used or use in my mod.
+
+If I forgot to credit you, please let me know! I want to credit you!
+
+
+
+This mod would not be possible, or would at least be much worse without:
+
+
+
+
+[SOUNDS]
+
+
+DSSHOTGN,DSTELEPT,DSRADIO: DWANGO 5.
+grendep.wav, grenbnce.wav, and grenexp.wav. Quake 1 (id Software)
+
+
+[CODE]
+
+
+Thank you to all the (G)ZDoom forumers for helping me out.
+Thanks to a specific (G)ZDoom forumer for giving me the help so this version can be.
+Special thanks to WildWeasel and Xim for helping me out with most of the stuff.
+Auto Shotgun: WildWeasel tutorial, modified by me. (Where it all started).
+Other Weapon Defs: ZDoom wiki.
+Part of the DEHACKED: Freedoom.
+Eon Weapons RC8.1 created by Ru5tK1ng for parts of melee weapons.
+
+
+
+
+
+[UNUSED STUFF]
+
+
+FSPLASMA: Freedoom. (unused)
+RSPISTOL: DWANGO 5 (unused)
+D5PLASMA: DWANGO 5 (unused)
+USPLASMA: Doomworld (unused)
+QSPLASMA: It's the Q3A sound, but I found the mod containing it in the Zandronum 
+forums. (Unused)
+CSPLASMA: Chex Quest 3. (Unused)

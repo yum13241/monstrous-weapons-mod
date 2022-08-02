@@ -1,0 +1,51 @@
+This is the changelog. The newest changes are at the TOP.
+
+
+v1.4
+
+Oh boy, where do I start?
+
+Made chaingun faster, made fist more powerful, chainsaw is faster to compensate, grenades are much better now, grenade sounds are in as well. Now the BFG altfire fires 3 railgun shots after the ball blast. And the balls bounce too! But only 3 times for balance reasons.
+
+From the README.TXT file:
+
+"After the green and red ball blast, there will be 3 railgun shots, one centered, and one 10
+degrees to the right, and another 10 degrees to the left. The centered one happens before the 
+right and left ones do. The right and left ones fire at the same time. The balls bounce 3 times too!"
+
+
+ALSO, since I FINALLY fixed the pistol animation bug (by shortening its tick length) that plauged 
+the Zandronum version, I can now FINALLY merge both versions! Hurray!
+
+
+===LEGALESE INCOMING!===
+
+
+The project is also now licensed under the WTHPL version 2. Older versions retain their WTHPL
+version 1 license as the WTHPL version 1 does NOT allow relicensing under any other license.
+WTHPL version 2 contains exceptions for relicensing under most GNU GPL licenses (in particular, 
+GNU GPL v2 is NOT ALLOWED because it doesn't forbid tivozation [vendor lock-in] ) AND newer
+WTHPL versions.
+
+In other words, versions 1.3 and below are forever under WTHPL version 1 because I DID NOT
+add an exception for upgrading or switching to most GNU GPL licenses.
+
+
+===LEGALESE OVER!===
+
+
+v1.3
+
+Tweaked grenades.
+
+v1.2
+
+Added a TEST map and modified the BFG behavior.
+
+v1.1
+
+Addded TDBots compat and changed STARTUP5. Also added the changelog in this PK3 for the first time.
+
+v1.0
+
+Initial public release.

@@ -1,0 +1,18 @@
+# This is a magic comment recognized by Chocolate Doom, so that the
+# BEX [STRINGS] section below will be parsed:
+#
+#   *allow-extended-strings*
+
+[STRINGS]
+# Text shown on startup in Boom-compatible ports. This is all in
+# STARTUP5, so if a mod replaces STARTUP1-4, it will still be shown.
+STARTUP5========\n\nHey, you are playing The Monstrous Weapons mod by yum13241.\n\n========
+GOTCHAINGUN = You got the precise chaingun!
+GOTLAUNCHER = You got the explosive launcher!
+GOTSHOTGUN = You got the Auto Shotgun! Boom, boom, boom.
+TAG_CHAINGUN = Precise Chaingun
+TAG_PLASMARIFLE = Plasma Gun
+TAG_ROCKETLAUNCHER = Explosive Launcher
+
+#TAG_SUPERSHOTGUN = Faster SSG
+#TAG_PISTOL Precise Pistol

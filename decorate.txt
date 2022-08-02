@@ -1,0 +1,633 @@
+
+ACTOR AutoShotgun : Weapon replaces Shotgun
+{
+Inventory.PickupMessage "You got the Auto Shotgun! Boom, boom, boom."
+Weapon.AmmoType "Shell"
+Weapon.AmmoType2 "Shell"
+Weapon.AmmoUse 1
+Weapon.SlotPriority -1
+Weapon.AmmoUse2 1
+Weapon.AmmoGive 6
+Weapon.SlotNumber 3
+-WEAPON.BFG
+AttackSound "weapons/shotgf"
+Tag "Auto Shotgun"
+Obituary "%o chewed on %k's automatic boomstick."
+States
+{
+Spawn:
+SHOT A -1
+Stop
+Ready:
+TNT1 A 0 A_WeaponReady
+SHTG A 1 A_WeaponReady
+TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+//SHTG A 7 A_WeaponReady
+//SHTG BC 5 A_WeaponReady
+//SHTG D 4 A_WeaponReady
+//SHTG CB 5 A_WeaponReady
+//SHTG A 3 A_WeaponReady
+//SHTG A 7 A_WeaponReady
+
+Loop
+Select:
+TNT1 A 0 A_Raise
+SHTG A 1 A_Raise
+Loop
+Deselect:
+TNT1 A 0 A_Lower
+SHTG A 1 A_Lower
+Loop
+Fire:
+SHTG A 0 A_GunFlash
+SHTG A 1 A_FireBullets(5.5, 3, 8, 4, "BulletPuff", 1)
+SHTG A 1 Offset(0,40)
+SHTG A 1 Offset(0,48)
+SHTG A 1 Offset(0,44)
+SHTG A 1 Offset(0,40)
+SHTG A 1 Offset(0,37)
+SHTG A 1 Offset(0,35)
+SHTG A 3
+SHTG A 0
+//STHG A 1 A_WeaponReady
+SHTG A 3 A_WeaponReady
+SHTG BC 5 //A_WeaponReady
+SHTG D 4 //A_WeaponReady
+SHTG CB 5 //A_WeaponReady
+SHTG A 3 //A_WeaponReady
+SHTG A 7 A_WeaponReady
+Goto Ready
+AltFire:
+ SHTG A 3
+    SHTG A 7 A_FireShotgun
+    SHTG BC 5
+    SHTG D 4
+    SHTG CB 5
+    SHTG A 3
+    SHTG A 7 A_ReFire
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "AltFire")
+
+    Goto Ready
+Flash:
+SHTF A 2 BRIGHT A_Light2
+SHTF B 2 BRIGHT A_Light1
+TNT1 A 1 A_Light0
+Goto LightDone
+}
+}
+ACTOR AltSuperShotgun : Weapon replaces SuperShotgun
+{
+  Weapon.SelectionOrder 400
+  Weapon.AmmoUse 2
+  Weapon.AmmoGive 8
+  Weapon.SlotNumber 3
+  Weapon.AmmoType "Shell"
+  Inventory.PickupMessage "$GOTSHOTGUN2"
+  Obituary "$OB_MPSSHOTGUN"
+  Tag "$TAG_SUPERSHOTGUN"
+  States
+  {
+  Ready:
+    SHT2 A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+    Loop
+  Deselect:
+    TNT1 A 0 A_Lower
+    SHT2 A 1 A_Lower
+    Loop
+  Select:
+   TNT1 A 0 A_Raise
+   SHT2 A 1 A_Raise
+    Loop
+  Fire:
+    SHT2 A 2
+    SHT2 A 6 A_FireShotgun2
+    SHT2 B 5 A_CheckReload
+    SHT2 C 5 A_CheckReload
+    SHT2 D 5 A_OpenShotgun2
+    SHT2 E 5
+    SHT2 F 5 A_LoadShotgun2
+    SHT2 G 4
+    SHT2 H 4 A_CloseShotgun2
+    SHT2 A 3 A_ReFire
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+    Goto Ready
+    // unused states
+    SHT2 B 7
+    SHT2 A 3
+    Goto Deselect
+  Flash:
+    SHT2 I 4 Bright A_Light1
+    SHT2 J 3 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    SGN2 A -1
+    Stop
+  }
+}
+
+ACTOR PlasmaGun : Weapon replaces PlasmaRifle
+{
+Weapon.AmmoType "Cell"
+Weapon.AmmoUse 1
+Weapon.AmmoUse2 10
+Weapon.AmmoType2 "Cell"
+Weapon.AmmoGive 32
+Weapon.SlotNumber 6 
+Obituary "%o chewed on %k's Plasma Gun."
+  Inventory.PickupMessage "$GOTPLASMA"
+  Tag "$TAG_PLASMARIFLE"
+  States
+  {
+  Ready:
+    PLSG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+    Loop
+  Deselect:
+    PLSG A 1 A_Lower
+    TNT1 A 0 A_Lower
+
+    Loop
+  Select:
+    TNT1 A 0 A_Raise
+    PLSG A 1 A_Raise
+    Loop
+  Fire:
+    PLSG A 3 A_FirePlasma
+    PLSG B 0 A_ReFire
+    Goto Ready
+  AltFire:
+    PLSG A 1 A_JumpIfInventory("Cell", 10, 1)
+    Goto Ready
+	PLSG A 3 Bright A_FireRailgun
+ 	PLSG B 40
+ 	Goto Ready
+  Flash:
+    PLSF A 4 Bright A_Light1
+    Goto LightDone
+    PLSF B 4 Bright A_Light1
+    Goto LightDone
+  Spawn:
+    PLAS A -1
+    Stop
+  }
+}
+
+
+ACTOR OldBFG9000 : Weapon replaces BFG9000
+{
+  Height 20
+  Weapon.SelectionOrder 2800
+  Weapon.AmmoUse 40
+  Weapon.AmmoUse2 1
+  Weapon.AmmoGive 40
+  Weapon.SlotNumber 7
+  Weapon.AmmoType "Cell"
+  Weapon.AmmoType2 "Cell"
+  +WEAPON.NOAUTOFIRE
+  +WEAPON.BFG
+  Inventory.PickupMessage "$GOTBFG9000"
+  Tag "$TAG_BFG9000"
+  States
+  {
+  Ready:
+    BFGG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+    Loop
+  Deselect:
+    TNT1 A 0 A_Lower
+    BFGG A 1 A_Lower
+    Loop
+  Select:
+    TNT1 A 0 A_Raise
+    BFGG A 1 A_Raise
+    Loop
+  Fire:
+    BFGG A 20 A_BFGSound
+    BFGG B 10 A_GunFlash
+    BFGG B 10 A_FireBFG
+    BFGG B 20 A_ReFire
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+    Goto Ready
+  Flash:
+    BFGF A 11 Bright A_Light1
+    BFGF B 6 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    BFUG A -1
+    Stop
+  AltFire:
+    BFGG A 10 A_BFGSound
+    BFGG BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 Bright A_FireOldBFG
+	BFGG A 5 Bright A_FireRailgun 
+    BFGG A 0 Bright A_FireRailgunLeft
+	BFGG A 0 Bright A_FireRailgunRight
+    BFGG B 0 A_Light0
+    BFGG B 20 A_ReFire
+    Goto Ready
+  }
+}
+
+ACTOR PreciseChaingun : Weapon replaces Chaingun
+{
+   Weapon.SelectionOrder 700
+   Weapon.AmmoUse 1
+   Weapon.AmmoGive 20
+   Weapon.SlotNumber 4
+   Weapon.AmmoType "Clip"
+   Inventory.PickupMessage /*"$GOTCHAINGUN"*/ "You got the precise chaingun!"
+   Obituary  "%o was mowed down by %k's precise chaingun."
+   //"$OB_MPCHAINGUN"
+   Tag "$TAG_CHAINGUN"
+   States
+   {
+   Ready:
+     CHGG A 1 A_WeaponReady
+	 TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+     Loop
+   Deselect:
+     TNT1 A 0 A_Lower
+     CHGG A 1 A_Lower
+     Loop
+   Select:
+     TNT1 A 0 A_Raise
+     CHGG A 1 A_Raise
+     Loop
+	 
+   Fire:
+     CHGG A 0 A_PlaySound("weapons/chngun", CHAN_WEAPON)
+     CHGG A 0 A_GunFlash
+     CHGG A 3 A_FireBullets(0, 0, 1, 5, "BulletPuff")
+     CHGG B 0 A_PlaySound("weapons/chngun", CHAN_WEAPON)
+     CHGG B 0 A_GunFlash("Flash2")
+     CHGG B 4 A_FireBullets(0, 0, 1, 5, "BulletPuff")
+     CHGG B 0 A_ReFire
+	 TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+     Goto Ready
+
+  Flash:
+     CHGF A 4 Bright A_Light1
+     Goto LightDone
+  Flash2:
+     CHGF B 4 Bright A_Light2
+     Goto LightDone
+	 
+   Spawn:
+     MGUN A -1
+     Stop
+   }
+}
+
+ACTOR PrecisePistol : Weapon replaces Pistol
+{
+  Weapon.SelectionOrder 1900
+  Weapon.AmmoUse 1
+  Weapon.AmmoType2 "Clip"
+  Weapon.AmmoUse2 3
+  Weapon.AmmoGive 20
+  Weapon.SlotNumber 2
+  Weapon.AmmoType "Clip"
+  Obituary "%o was mowed down by %k's precise peashooter."
+  +WEAPON.WIMPY_WEAPON
+  Inventory.Pickupmessage "You got the Precise Pistol!"
+  Tag "Precise Pistol"
+  States
+  {
+  Ready:
+    PISG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+    Loop
+  Deselect:
+   TNT1 A 0 A_Lower
+    PISG A 1 A_Lower
+    Loop
+  Select:
+    TNT1 A 0 A_Raise
+    PISG A 1 A_Raise
+    Loop
+  Fire:
+   PISG A 4
+   PISG B 6 BRIGHT
+   TNT1 A 0 A_FireBullets(0, 0, 1, 8, "BulletPuff")
+   TNT1 A 0 A_PlaySound("weapons/pistol")
+   TNT1 A 0 A_GunFlash
+   PISG C 4
+   PISG B 5 A_ReFire
+   TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+
+   Goto Ready
+  AltFire:
+   PISG A 4
+   PISG B 6 BRIGHT
+   TNT1 A 0 A_FireBullets(5.6, 5.6, 3, 7, "BulletPuff")
+   TNT1 A 0 A_PlaySound("weapons/pistol")
+   TNT1 A 0 A_GunFlash
+   PISG C 4
+   PISG B 5 A_ReFire
+   TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "AltFire")
+
+   Goto Ready
+   
+  Flash:
+    PISF A 4 Bright A_Light1
+    Goto LightDone
+    PISF A 4 Bright A_Light1
+    Goto LightDone
+  Spawn:
+    PIST A -1
+    Stop
+  }
+}
+
+ACTOR ExplosiveLauncher : Weapon replaces RocketLauncher
+{
+  Weapon.SelectionOrder 2500
+  Weapon.AmmoUse 1
+  Weapon.AmmoUse2 1
+  Weapon.AmmoGive 5
+  Weapon.SlotNumber 5
+  Weapon.AmmoType "RocketAmmo"
+  Weapon.AmmoType2 "RocketAmmo"
+  +WEAPON.NOAUTOFIRE
+  +WEAPON.EXPLOSIVE
+  Inventory.PickupMessage "$GOTLAUNCHER"
+  Tag "$TAG_ROCKETLAUNCHER"
+  States
+  {
+  Ready:
+    MISG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+    Loop
+  Deselect:
+    TNT1 A 0 A_Lower
+    MISG A 1 A_Lower
+	TNT1 A 0 A_TakeInventory("BotExplosiveWeapon")
+    Loop
+  Select:
+    TNT1 A 0 A_Raise
+    MISG A 1 A_Raise
+	TNT1 A 0 A_GiveInventory("BotExplosiveWeapon")
+    Loop
+  Fire:
+    MISG B 8 A_GunFlash
+    MISG B 12 A_FireMissile
+    MISG B 0 A_ReFire
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+    Goto Ready
+  AltFire:
+    MISG B 8 A_GunFlash
+	MISG B 0 A_PlaySound("weapons/grende", CHAN_WEAPON)
+    MISG B 12 A_ThrowGrenade("Grenade", 0, 0, 2, true)
+    MISG B 0 A_ReFire
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "AltFire")
+    Goto Ready
+  Flash:
+    MISF A 3 Bright A_Light1
+    MISF B 4 Bright
+    MISF CD 4 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    LAUN A -1
+    Stop
+  }
+}
+
+ACTOR AltGrenade : Actor replaces Grenade
+{
+  Radius 8
+  Height 8
+  Speed 20
+  Damage 20
+  Projectile
+  -NOGRAVITY
+  +RANDOMIZE
+  -DEHEXPLOSION
+  +GRENADETRAIL
+  BounceType "Doom"
+  Gravity 0.75
+  BounceCount 3
+  SeeSound "weapons/grenlf"
+  DeathSound "weapons/grenxp"
+  BounceSound "weapons/grbnce"
+  Obituary  "%o caught %k's grenade."
+  //"$OB_GRENADE"
+  DamageType Grenade
+  States
+  {
+  Spawn:
+    SGRN A 1 Bright
+    Loop
+  Death:
+    MISL B 8 Bright A_Explode
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  Grenade:
+    MISL A 1000 A_Die
+    Wait
+  Detonate:
+    MISL B 4 A_Scream
+    MISL C 6 A_Detonate
+    MISL D 10
+    Stop
+  Mushroom:
+    MISL B 8 A_Mushroom
+    Goto Death+1
+  }
+}
+ACTOR FixedPlasmaBall
+{
+  Radius 13
+  Height 8
+  Speed 25
+  Damage 5
+  Projectile
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 0.75
+  SeeSound "weapons/plasmaf"
+  DeathSound "weapons/plasmax"
+  Obituary "$OB_MPPLASMARIFLE" // "%o was melted by %k's plasma gun."
+  States
+  {
+  Spawn:
+    PLSS AB 6 Bright
+    Loop
+  Death:
+    PLSE ABCDE 4 Bright
+    Stop
+  }
+}
+
+
+ACTOR FixedPlasmaball1 : Plasmaball1 replaces Plasmaball1
+{
+  Damage 16
+  BounceType "Classic"
+  BounceCount 3
+  BounceFactor 0.8
+  WallBounceFactor 9
+  Obituary "%o was burned by %k's BFG balls."
+  SeeSound "dsempty"
+}
+
+ACTOR FixedPlasmaball2 : Plasmaball2 replaces Plasmaball2
+{
+  Damage 16
+  BounceType "Classic"
+  BounceCount 3
+  BounceFactor 0.8
+  Obituary "%o was burned by %k's BFG balls."
+  WallBounceFactor 9
+  SeeSound "dsempty"
+}
+
+ACTOR AltDoomPlayer : PlayerPawn
+{
+  Speed 1
+  Health 100
+  Radius 16
+  Height 56
+  Mass 100
+  PainChance 255
+  Player.DisplayName "Marine"
+  Player.CrouchSprite "PLYC"
+  Player.StartItem "PrecisePistol"
+  Player.ForwardMove 1
+  Player.SideMove 1 
+  Player.StartItem "NewFist"
+  Player.StartItem "Clip", 51
+  Player.WeaponSlot 1, NewFist, NewChainsaw
+  Player.WeaponSlot 2, Pistol
+  Player.WeaponSlot 3, Shotgun, SuperShotgun
+  Player.WeaponSlot 4, Chaingun
+  Player.WeaponSlot 5, RocketLauncher
+  Player.WeaponSlot 6, PlasmaRifle
+  Player.WeaponSlot 7, BFG9000
+  Player.ColorRange 112, 127
+  Player.ColorSet 0, "Green",         0x70, 0x7F,  0x72
+  Player.ColorSet 1, "Gray",          0x60, 0x6F,  0x62 // Called "Indigo" originally so as to have a unique initial
+  Player.ColorSet 2, "Brown",         0x40, 0x4F,  0x42
+  Player.ColorSet 3, "Red",           0x20, 0x2F,  0x22
+  // Doom Legacy additions
+  Player.ColorSet 4, "Light Gray",    0x58, 0x67,  0x5A
+  Player.ColorSet 5, "Light Brown",   0x38, 0x47,  0x3A
+  Player.ColorSet 6, "Light Red",     0xB0, 0xBF,  0xB2
+  Player.ColorSet 7, "Light Blue",    0xC0, 0xCF,  0xC2
+
+  States
+  {
+  Spawn:
+    PLAY A -1
+    Loop
+  See:
+    PLAY ABCD 4 
+    Loop
+  Missile:
+    PLAY E 12
+    Goto Spawn
+  Melee:
+    PLAY F 6 BRIGHT
+    Goto Missile
+  Pain:
+    PLAY G 4 
+    PLAY G 4 A_Pain
+    Goto Spawn
+  Death:
+    PLAY H 0 A_PlayerSkinCheck("AltSkinDeath")
+  Death1:
+    PLAY H 10
+    PLAY I 10 A_PlayerScream
+    PLAY J 10 A_NoBlocking
+    PLAY KLM 10
+    PLAY N -1
+    Stop
+  XDeath:
+    PLAY O 0 A_PlayerSkinCheck("AltSkinXDeath")
+  XDeath1:
+    PLAY O 5
+    PLAY P 5 A_XScream
+    PLAY Q 5 A_NoBlocking
+    PLAY RSTUV 5
+    PLAY W -1
+    Stop
+  AltSkinDeath:
+    PLAY H 6
+    PLAY I 6 A_PlayerScream
+    PLAY JK 6
+    PLAY L 6 A_NoBlocking
+    PLAY MNO 6
+    PLAY P -1
+    Stop
+  AltSkinXDeath:
+    PLAY Q 5 A_PlayerScream
+    PLAY R 0 A_NoBlocking
+    PLAY R 5
+    PLAY STUVWX 5
+    PLAY Y -1
+    Stop
+  }
+}
+
+
+ACTOR NewFist : Fist replaces Fist
+ {
+  Weapon.SlotNumber 1
+  Weapon.SlotPriority -1
+  Weapon.Kickback 50
+  Weapon.SelectionOrder 9999
+  Tag "Fists"
+  Obituary "%o was beat up by %k's fists."
+  States
+   {
+    Select:
+	TNT1 A 0 A_Raise
+	PUNG A 1 A_Raise
+	Loop
+	
+	Deselect:
+	TNT1 A 0 A_Lower
+	PUNG A 1 A_Lower
+	Loop
+	Fire:
+	  PUNG B 2
+	  PUNG C 2 A_CustomPunch(random(1,5) * 2, TRUE, 0, "Puff")
+	  PUNG D 3
+	  PUNG C 3
+	  PUNG B 3 A_ReFire
+	}
+}
+
+
+ACTOR NewChainsaw : Chainsaw replaces Chainsaw
+ {
+  Weapon.SlotNumber 1
+  Weapon.SelectionOrder 8888
+  Tag "UltraSaw (TM)"
+  Obituary "%o was chopped by %k's UltraSaw (TM)."
+  States
+   {
+    Select:
+	TNT1 A 0 A_Raise
+	SAWG C 1 A_Raise
+	Loop
+	
+	Deselect:
+	TNT1 A 0 A_Lower
+	SAWG C 1 A_Lower
+	Loop
+	
+	Fire:
+	  SAWG AB 3 A_Saw
+	  SAWG B 0 A_ReFire
+	  Goto Ready
+	}
+}
