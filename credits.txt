@@ -3,7 +3,8 @@
 
 This is where I credit work that I have used or use in my mod.
 
-If I forgot to credit you, please let me know! I want to credit you!
+If I forgot to credit you or I credit the wrong source, please let me
+know! I want to credit you!
 
 
 
@@ -17,6 +18,7 @@ This mod would not be possible, or would at least be much worse without:
 
 DSSHOTGN,DSTELEPT,DSRADIO: DWANGO 5.
 grendep.wav, grenbnce.wav, and grenexp.wav. Quake 1 (id Software)
+dsplasma.wav taken from Eon Weapons RC8.1 created by Ru5tK1ng. 
 
 
 [CODE]
@@ -28,9 +30,15 @@ Special thanks to WildWeasel and Xim for helping me out with most of the stuff.
 Auto Shotgun: WildWeasel tutorial, modified by me. (Where it all started).
 Other Weapon Defs: ZDoom wiki.
 Part of the DEHACKED: Freedoom.
-Eon Weapons RC8.1 created by Ru5tK1ng for parts of melee weapons.
+Eon Weapons RC8.1 created by Ru5tK1ng for parts of melee weapons and
+for the chaingun fire code to make the new animation smoother.
 
 
+
+[SPRITES]
+
+
+Eon Weapons RC8.1 created by Ru5tK1ng for the cool Chaingun sprites.
 
 
 
