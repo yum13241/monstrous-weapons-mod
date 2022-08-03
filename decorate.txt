@@ -261,15 +261,23 @@ ACTOR PreciseChaingun : Weapon replaces Chaingun
      Loop
 	 
    Fire:
-     CHGG A 0 A_PlaySound("weapons/chngun", CHAN_WEAPON)
-     CHGG A 0 A_GunFlash
-     CHGG A 3 A_FireBullets(0, 0, 1, 5, "BulletPuff")
-     CHGG B 0 A_PlaySound("weapons/chngun", CHAN_WEAPON)
-     CHGG B 0 A_GunFlash("Flash2")
-     CHGG B 4 A_FireBullets(0, 0, 1, 5, "BulletPuff")
-     CHGG B 0 A_ReFire
+     //CHGG A 0 A_PlaySound("weapons/chngun", CHAN_WEAPON)
+     //CHGG A 0 A_GunFlash
+     //CHGG A 3 A_FireBullets(0, 0, 1, 5, "BulletPuff")
+     //CHGG B 0 A_PlaySound("weapons/chngun", CHAN_WEAPON)
+     //CHGG C 0 A_GunFlash("Flash2")
+     //CHGG B 4 A_FireBullets(0, 0, 1, 5, "BulletPuff")
+     //CHGG D 0 A_ReFire
+	 TNT1 A 0 A_GunFlash("Flash")
+	 CHGG A 2 Bright A_FireBullets(0, 0, 1, 5)
+	 TNT1 A 0 A_PlaySound("weapons/pistol")
+	 CHGG B 1
+	 CHGG B 0 Bright A_FireBullets(0, 0, -1, 5)
+	 CHGG C 2 Bright A_GunFlash("Flash2")
+	 TNT1 A 0 A_PlaySound("weapons/pistol")
+	 CHGG D 1
+	 TNT1 A 0 A_ReFire
 	 TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
-
      Goto Ready
 
   Flash:
@@ -418,7 +426,6 @@ ACTOR AltGrenade : Actor replaces Grenade
   DeathSound "weapons/grenxp"
   BounceSound "weapons/grbnce"
   Obituary  "%o caught %k's grenade."
-  //"$OB_GRENADE"
   DamageType Grenade
   States
   {
