@@ -1,3 +1,28 @@
-weapons/grbnce    grenbnce
-weapons/grende     grendep
+//what I	--	//what it's
+//want to	--	//actually
+//call it	--	called
+
+weapons/grbnce   grenbnce
+weapons/grende   grendep
 weapons/grenxp   grenexp
+railshot		 dsrail
+railpwron        railon
+dshbf            hbfattack
+
+
+//Enforcer
+weapons/enforcerup	ENFCUP
+weapons/enforcerfire	ENFCFIRE
+weapons/enforcerdry	ENFCDRY
+weapons/enforcerout	ENFCOUT
+weapons/enforcerin	ENFCIN
+
+
+dspist              DSPISG
+pzattk              cqplasma
+zrchattk            cqzorch
+dmplasma             doomplasma
+cqexplode            cqxplod
+cqshotgun            cqshtgn
+weapons/unmaker      DSLASER
+railpwron2           railchrge

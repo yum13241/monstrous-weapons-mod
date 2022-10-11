@@ -1,5 +1,23 @@
 This is the changelog. The newest changes are at the TOP.
 
+v1.6
+
+
+BIGGEST UPDATE YET!
+
+Bug fixes and fixing the changelog. Also split up the decorate files. The test map now works. Also returned the fist to normal damage so berserk isn't broken. FINALLY. FIXED. THE. DAMN. PISTOL. BUG.
+Oh, and a new pistol replacement (for playing Doom) and Chex Quest 3 WORKS!
+
+At the CHOOSE YOUR GAME screen, you __can__ pick a game (which is just a class) which you aren't playing but there is basically no benefit. It breaks the game. This menu should never appear, and Zandronum doesn't support filter folders (uggh) so a separate addon is made for Chex Quest 3. This addon requires the main mod to function, and musn't be loaded when playing Doom.
+
+Restored better fist from Eon Weapons RC8.1.
+
+[TODO] Add new weapon sprites for all weapons. 
+Now the project is licensed under WTHPL3.
+
+v1.5
+
+Improved the chaingun.
 
 v1.4
 
@@ -10,8 +28,7 @@ Made chaingun faster, made fist more powerful, chainsaw is faster to compensate,
 From the README.TXT file:
 
 "After the green and red ball blast, there will be 3 railgun shots, one centered, and one 10
-degrees to the right, and another 10 degrees to the left. The centered one happens before the 
-right and left ones do. The right and left ones fire at the same time. The balls bounce 3 times too!"
+degrees to the right, and another 10 degrees to the left. The balls bounce 3 times too!"
 
 
 ALSO, since I FINALLY fixed the pistol animation bug (by shortening its tick length) that plauged 

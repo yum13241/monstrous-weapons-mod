@@ -1,5 +1,5 @@
-				     DO WHAT THE HELL YOU WANT TO PUBLIC LICENSE
-									Version 2, June 2022
+						 DO WHAT THE HELL YOU WANT TO PUBLIC LICENSE
+								Version 3, September 2022
 
  Copyright (C) 2021 yum13241 <anarchyforall123@gmail.com>
 
@@ -7,7 +7,7 @@
  copies of this license document, and changing it is allowed as long
  as the name is changed.
 
-                             DO WHAT THE HELL YOU WANT TO PUBLIC LICENSE
+                          DO WHAT THE HELL YOU WANT TO PUBLIC LICENSE
              TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. You just DO WHAT THE HELL YOU WANT TO, but if you create a derivative work,
@@ -15,8 +15,11 @@
   (in this case, yum13241).
   
   1. You are NOT allowed to further restrict the license. In essence, it is 
-  share-alike. In other words, this project MUST REMAIN under the WTHPL. You
-  are, allowed to make changes to the license, if you only use the license.
+  share-alike. In other words, this project MUST REMAIN under the WTHPL. 
+  
+  ---
+  
+  You are allowed to make changes to the license, if you only use the license.
   An EXCEPTION is made for the GNU GPL family of licenses. You are allowed to transfer a project
   using this license to any GNU GPL license that forbids tivozation (vendor lock-in). Therefore,
   GNU GPL v2 is NOT ALLOWED. GNU GPL v3 is ALLOWED because it forbids tivozation. GNU LGPL 
@@ -24,6 +27,10 @@
   licenses that forbid tivozation is ALLOWED, but the same is not true in reverse due to the
   conditions of the GNU GPL.
   
+  Tivozation is when the source code may be free as in free speech, but the software/product
+  checks on startup to check if it's modified and fails upon detecting a modififed version.
+  Such practices are not allowed.
+  ---
   
   You are ALSO ALLOWED to relicense a project under a newer version of the WTHPL starting
   from version 2 onwards.
@@ -31,13 +38,13 @@
   
   2. If you distribute a verbatim copy of this mod, you MUST keep everything
   intact. Otherwise it is a derivative work and you must give credit to the 
-  original creator and keep the license intact.
+  original creator and keep the license intact with some exceptions (see section 1).
   
   3. You are only allowed to modify the license if you use it in a different
   work.
   
   4. Any project using this license must have its source code free to see,
-  learn from, and modify. In other words, the project must be free software.
+  learn from, use, and modify. In other words, the project must be free software.
   
   5. If you make a new version of this license, you cannot call yours the WTHPL.
   
@@ -47,7 +54,7 @@
   7. This mod is free software. It comes without any warranty, to
      * the extent permitted by applicable law. You can redistribute it
      * and/or modify it under the terms of the Do What The Hell You Want
-     * To Public License, Version 1, as published by yum13241. See
+     * To Public License, Version 3, as published by yum13241. See
      * http://www.wtfpl.net/ for more details.
 
   

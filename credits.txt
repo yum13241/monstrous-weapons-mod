@@ -16,39 +16,67 @@ This mod would not be possible, or would at least be much worse without:
 [SOUNDS]
 
 
-DSSHOTGN,DSTELEPT,DSRADIO: DWANGO 5.
+DSSHOTGN,DSTELEPT,DSRADIO: DWANGO 5. I am aware that the 1st sound is from Doom 64/PSX Doom, and the 2nd and 3rd are from Heretic.
 grendep.wav, grenbnce.wav, and grenexp.wav. Quake 1 (id Software)
-dsplasma.wav taken from Eon Weapons RC8.1 created by Ru5tK1ng. 
+dsplasma.wav and dsrail taken from Eon Weapons RC8.1 created by Ru5tK1ng.
+railon.wav is taken from Brutal Doom Platinum, but it's in Brutal Doom by SGTMARKIV as well.
+Doom 64 for hbfattack.ogg.
+Doom 64 for DSLASER.
 
 
 [CODE]
 
 
 Thank you to all the (G)ZDoom forumers for helping me out.
-Thanks to a specific (G)ZDoom forumer for giving me the help so this version can be.
 Special thanks to WildWeasel and Xim for helping me out with most of the stuff.
 Auto Shotgun: WildWeasel tutorial, modified by me. (Where it all started).
 Other Weapon Defs: ZDoom wiki.
-Part of the DEHACKED: Freedoom.
-Eon Weapons RC8.1 created by Ru5tK1ng for parts of melee weapons and
-for the chaingun fire code to make the new animation smoother.
+Eon Weapons RC8.1 created by Ru5tK1ng for parts of melee weapons and for the chaingun fire code to make the new animation smoother and some railgun stuff as well.
+The author of the Doom 64 Retribution TC for the Unmaker.
 
 
+ENFORCER WEAPON (text below was taken from Realm667)
+
+
+Submitted: PillowBlaster
+Decorate: PillowBlaster
+GLDefs: N\A
+Sounds: Ubisoft
+Sprites: ClonedPickle, MidoriMan, Epic Games
+Sprite Edit: PillowBlaster
+Idea Base: Enforcer from Unreal Tournament.
 
 [SPRITES]
 
 
-Eon Weapons RC8.1 created by Ru5tK1ng for the cool Chaingun sprites.
+Eon Weapons RC8.1 created by Ru5tK1ng for the cool Chaingun and railgun sprites. Including the railgun rail.
+Doom 64 for the HBF sprites. (it's just the Doom 64 BFG sprites lol)
+
+
+[FONTS]
+
+------
+(info from Realm667)
+Submitted: Jimmy
+Author: Jimmy, Andrew Tyler of textcraft.net, Mojang
+Original font: Minecraft's in-game font
+
+Name: Minecraftia
+Type: SmallFont, BigFont
+Format: FON2
+Variants: 6
+Replaces: SmallFont and BigFont
+Size: 9px, 18px
+Paletted: Doom (indices 0 and 247 swapped)
+Lower-cases: Yes
+Individual glyphs/character maps included: Yes
+Standard GFX included: N/A
+
+
+Something pixelly yet legible. Comes in both 1x and 2x size variants, plus three colors: plain
+black and white, silver (gradient) and red (gradient).
+-----
 
 
 
-[UNUSED STUFF]
-
-
-FSPLASMA: Freedoom. (unused)
-RSPISTOL: DWANGO 5 (unused)
-D5PLASMA: DWANGO 5 (unused)
-USPLASMA: Doomworld (unused)
-QSPLASMA: It's the Q3A sound, but I found the mod containing it in the Zandronum 
-forums. (Unused)
-CSPLASMA: Chex Quest 3. (Unused)
+AND THANK __YOU__ FOR DOWNLOADING!

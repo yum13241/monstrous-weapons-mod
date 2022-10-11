@@ -1,0 +1,18 @@
+[enu default]
+//STARTUP5 is in DeHackEd.
+MNU_CHOOSECLASS = "CHOOSE YOUR GAME (shouldn't ever see)"; //hack to make the class menu say what I just wrote to make it more professional, if someone knows how to force the player a certain class depending on the game please let me know. Update: This gross hack now goes unused in GZDoom. but not Zandronum for having no filter folder support. Update 2: This should never appear. The mod kinda-sorta feels like spaghetti code. Thanks Zandro for the split! (it's devs aren't bad people, the BAD thing about Zandronum is its sheer outdatedness, Zandronum isn't inherently bad)
+
+TAG_PISTOL = "Precise Pistol";
+OB_PISTOL = "%o was killed by %k's precise peashooter.";
+GOTCHAINGUN = "You got the precise machinegun!";
+GOTLAUNCHER = "You got the explosive launcher!";
+GOTSHOTGUN = "You got the Auto Shotgun! Boom, boom, boom.";
+GOTCHAINSAW = "You got the UltraSaw (TM)! Find some meat!";
+TAG_CHAINGUN = "Precise Machinegun";
+TAG_PLASMARIFLE = "Plasma Gun";
+TAG_ROCKETLAUNCHER = "Explosive Launcher";
+TAG_LASER = "Unmaker";
+GOTLASER = "You got the Unmaker! Now Unmake!";
+GOTARTIFACT1 = "You have a feeling it wasn't supposed to be in humanity's hands...";
+GOTARTIFACT2 = "Whatever the hell it is, it doesn't belong here...";
+GOTARTIFACT3 = "It has to do SOMETHING?! Am I right?";

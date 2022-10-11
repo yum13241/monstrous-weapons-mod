@@ -1,2 +1,2 @@
 STARTUPCOLORS = "#0800A5", "#FFFF11"
-STARTUPTITLE = "The Monstrous Weapons mod by yum13241. v1.4." 
+STARTUPTITLE = "The Monstrous Weapons mod by yum13241. v1.6." 

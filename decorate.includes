@@ -1,0 +1,5 @@
+#include DECORATE/player.decorate //player classes.
+#include DECORATE/actors.decorate //projectiles reside here, mainly. Some other IMPORTANT Actors are here.
+#include DECORATE/extraweapons.decorate //extra weapons. To remove them you would need to patch the player, remove the RandomSpawners and remove the file.
+#include DECORATE/weapons.decorate //new weapons.
+#include DECORATE/doomactors.decorate //doom ONLY actors.

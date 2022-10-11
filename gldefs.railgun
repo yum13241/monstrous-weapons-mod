@@ -1,0 +1,44 @@
+//==============
+//RailGun
+//==============
+
+brightmap sprite RLGNA0
+{
+	map "Brightmaps/RLGNA0"
+	disablefullbright
+}
+
+brightmap sprite RLGNB0
+{
+	map "Brightmaps/RLGNB0"
+	disablefullbright
+}
+
+brightmap sprite RLGNC0
+{
+	map "Brightmaps/RLGNC0"
+	disablefullbright
+}
+
+
+//-------------
+//Blue
+//-------------
+
+brightmap sprite RLGBA0
+{
+	map "Brightmaps/RLGNA0"
+	disablefullbright
+}
+
+brightmap sprite RLGBB0
+{
+	map "Brightmaps/RLGNB0"
+	disablefullbright
+}
+
+brightmap sprite RLGBC0
+{
+	map "Brightmaps/RLGNC0"
+	disablefullbright
+}
